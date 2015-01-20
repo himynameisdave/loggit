@@ -1,7 +1,7 @@
 {
   "name": "loggit",
   "version": "0.1.0",
-  "description": "Minuscule node module for loggin' things in a pretty & visible way.",
+  "description": "Minuscule node module for loggin' things in a pretty & more visible way.",
   "main": "loggit.js",
   "repository": {
     "type": "git",
@@ -17,7 +17,9 @@
     "user experience",
     "pretty",
     "console",
-    "colors"
+    "colors",
+    "utility",
+    "function"
   ],
   "author": "Dave Lunny",
   "license": "MIT",
