@@ -1,0 +1,31 @@
+{
+  "name": "loggit",
+  "version": "0.1.0",
+  "description": "Minuscule node module for loggin' things in a pretty & visible way.",
+  "main": "loggit.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/himynameisdave/loggit.git"
+  },
+  "keywords": [
+    "node",
+    "console.log",
+    "log",
+    "CLI",
+    "command-line",
+    "readability",
+    "user experience",
+    "pretty",
+    "console",
+    "colors"
+  ],
+  "author": "Dave Lunny",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/himynameisdave/loggit/issues"
+  },
+  "homepage": "https://github.com/himynameisdave/loggit",
+  "dependencies": {
+    "chalk": "^0.5.1"
+  }
+}

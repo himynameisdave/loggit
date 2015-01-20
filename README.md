@@ -1,2 +1,2 @@
 # loggit
-Minuscule node module for pretty console.loggin'
+Minuscule node module for loggin' things in a pretty & visible way.
