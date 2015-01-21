@@ -1,6 +1,6 @@
 # loggit [![npm](https://img.shields.io/npm/v/loggit.svg?style=flat-square)](https://www.npmjs.com/package/loggit)
 
-Minuscule node module for loggin' things in a pretty & more visible way. Also created because I got sick of writing out `console.log()` all the time and this is better solution.
+Minuscule node module for loggin' things in a pretty & more visible way. Also created because I got sick of writing out `console.log()` all the time and this is better solution. Uses [chalk](https://www.npmjs.com/package/chalk) to do the colors, so check that out if you're just looking for colors in the console and not a full-on logger like this one.
 
 ###Install
 

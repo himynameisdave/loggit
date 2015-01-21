@@ -1,6 +1,6 @@
 {
   "name": "loggit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Minuscule node module for loggin' things in a pretty & more visible way.",
   "main": "loggit.js",
   "repository": {
@@ -19,7 +19,10 @@
     "console",
     "colors",
     "utility",
-    "function"
+    "function",
+    "terminal",
+    "console",
+    "shell"
   ],
   "author": "Dave Lunny",
   "license": "MIT",
@@ -29,5 +32,8 @@
   "homepage": "https://github.com/himynameisdave/loggit",
   "dependencies": {
     "chalk": "^0.5.1"
+  },
+  "bin": {
+    "loggit": "loggit.js"
   }
 }

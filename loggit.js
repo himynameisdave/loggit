@@ -31,12 +31,12 @@ var chalk = require('chalk'),
     }
   }
   //  wut wut
-  if(msg.length >= size){
-    var m1 = msg.slice(0, size-2),
-        m2 = msg.slice(size-2, msg.length);
+  // if(msg.length >= size){
+  //   var m1 = msg.slice(0, size-2),
+  //       m2 = msg.slice(size-2, msg.length);
 
-    msg = m1 + '\n' + m2;
-  }
+  //   msg = m1 + '\n' + m2;
+  // }
 
   //  what to actually print
   var printThis = openClose + "\n" + msg + "\n" + openClose;
