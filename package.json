@@ -1,6 +1,6 @@
 {
   "name": "loggit",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Minuscule node module for loggin' things in a pretty & more visible way.",
   "main": "loggit.js",
   "repository": {
