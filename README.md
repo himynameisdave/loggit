@@ -2,7 +2,7 @@
 
 Minuscule node module for loggin' things in a pretty & more visible way. Also created because I got sick of writing out `console.log()` all the time and this is better solution. Uses [chalk](https://www.npmjs.com/package/chalk) to do the colors, so check that out if you're just looking for colors in the console and not a full-on logger like this one.
 
-###Install
+### Install
 
 This presumes that you've installed node and know how to install an npm module:
 
@@ -10,7 +10,7 @@ This presumes that you've installed node and know how to install an npm module:
 npm install loggit
 ```
 
-###Usage
+### Usage
 
 Usage is simple, just require `loggit` into script...
 
@@ -29,7 +29,7 @@ loggit('Dave is my homeboy!');
 
 ---
 
-###Options
+### Options
 
 What good is a module without any options? In addition to your message, you can also specify the color and the symbol that are used.
 
@@ -37,12 +37,32 @@ What good is a module without any options? In addition to your message, you can 
 loggit(msg, color, symbol);
 ```
 
-####`msg`
-***Required,** string*
+#### `msg`
+***Required,** string, array, object*
 
-This is the only required paramater. Must be a string, with or without `'\n'` (newlines) in it.
+This is the only required paramater. If it is a string it will simply be outputted as shown above. Arrays and objects passed in will be pretty printed out so that you don't have that ugly `[object Object]` output.
 
-####`color`
+**Example:** this...
+```bash
+loggit('I\'m just a string!');
+loggit([ 'we\'re', 'an', 'array', 'of', 'strings' ]);
+loggit({
+  foo: {
+    bar: 'we\'re',
+    baz: 'an',
+    roo: 'object',
+    arr: [
+      'this', 'is', 'cool'
+    ]
+  }
+});
+```
+...results in this...
+
+![console](http://i.imgur.com/A7WPULc.png)
+
+
+#### `color`
 *optional, string*
 
 Supply a valid [chalk](https://www.npmjs.com/package/chalk) color (red, green, magenta, underline, bgYellow, etc..) and that color will be used for the entire log. Yellow is used by default if no paramater is provided.
@@ -55,7 +75,7 @@ loggit('There will be blood...', 'red');
 
 ![otherconsole](http://i.imgur.com/2fcGVMy.png)
 
-####`symbol`
+#### `symbol`
 *optional, string*
 
 Supply a one or two character pattern that will be repeated for the top and bottom lines of your log (so that it is more visible amongst your various other console messages). The `*` is used by default. If you provide a string longer than two characters, just the first two characters will be used.
@@ -70,6 +90,6 @@ loggit('Radical, dude!', 'magenta', '!~');
 
 ---
 
-###Contribute
+### Contribute
 
 Feel free to fork the shit outta this thing or [hit me up on Twitter](https://twitter.com/dave_lunny) if you've got a comment or suggestion.

@@ -10,7 +10,8 @@ var chalk = require('chalk'),
       var col       = "yellow",
           sym       = "*",
           openClose = "",
-          size      = 46; // total size of the symbol string
+          size      = 46,
+          printThis = ''; // total size of the symbol string
 
       // Applies passed-in color if it exists
       if(typeof color  !== "undefined"){
@@ -24,6 +25,7 @@ var chalk = require('chalk'),
           sym = symbol;
         }
       }
+
       // Symbol adder
       if(sym.length === 1){
         for( i=0; i<=size; i++ ){
@@ -36,8 +38,18 @@ var chalk = require('chalk'),
         }
       }
 
-      //  what to actually print
-      var printThis = openClose + "\n" + msg + "\n" + openClose;
+      printThis = openClose + "\n";
+
+      if( Array.isArray(msg) ){
+        printThis += JSON.stringify( msg, null, 2 );
+      }
+      else if( typeof msg === "object" ){
+        printThis += JSON.stringify( msg, null, 2 );
+      }else{
+        printThis += msg;
+      }
+
+      printThis += "\n" + openClose;
 
       //  do it
       console.log(chalk[col]( printThis ));
