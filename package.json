@@ -1,28 +1,31 @@
 {
   "name": "loggit",
   "version": "0.2.0",
-  "description": "Minuscule node module for loggin' things in a pretty & more visible way.",
-  "main": "loggit.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/himynameisdave/loggit.git"
+  "description": "A simple and beautiful logging utility for NodeJS.",
+  "main": "dist/index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "dependencies": {
+    "center-align": "^1.0.1",
+    "chalk": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/center-align": "^1.0.0",
+    "typescript": "^4.1.2"
   },
   "keywords": [
-    "node",
-    "console.log",
     "log",
-    "CLI",
-    "command-line",
-    "readability",
-    "user experience",
-    "pretty",
-    "console",
-    "colors",
-    "utility",
-    "function",
-    "terminal",
-    "console",
-    "shell"
+    "logs",
+    "logger",
+    "logging",
+    "console.log",
+    "node-logging",
+    "console"
   ],
   "author": "Dave Lunny",
   "license": "MIT",
@@ -30,10 +33,8 @@
     "url": "https://github.com/himynameisdave/loggit/issues"
   },
   "homepage": "https://github.com/himynameisdave/loggit",
-  "dependencies": {
-    "chalk": "^0.5.1"
-  },
-  "bin": {
-    "loggit": "loggit.js"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/himynameisdave/loggit.git"
   }
 }

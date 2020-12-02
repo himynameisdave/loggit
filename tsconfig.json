@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES3",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    // "declaration": true,
+    "resolveJsonModule": true,
+    "downlevelIteration": true,
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "sourceRoot": "./src/",
+    "outDir": "./dist/",
+    "esModuleInterop": true
+  }
+}
