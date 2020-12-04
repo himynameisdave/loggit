@@ -17,7 +17,7 @@ describe('utils/getTaskBlock', () => {
   it('should center the task in the block', () => {
     const task = 'fo';
     const actual = getTaskBlock(task);
-    expect(actual).toContain('      FO      ');
+    expect(actual).toContain('     FO     ');
   });
   it('should allow the consumer to customize the color', () => {
     getTaskBlock('foo bar', mockColor);

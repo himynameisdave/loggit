@@ -7,5 +7,5 @@ export const DEFAULT_TASK_BLOCK_WIDTH = 14;
 
 export const DEFAULT_CREATE_LOGGER_CONFIG: CreateLoggerConfig = {
   taskColor: 'bgCyanBright',
-  timeStampColor: DEFAULT_TIMESTAMP_COLOR,
+  timestampColor: DEFAULT_TIMESTAMP_COLOR,
 };

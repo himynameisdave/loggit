@@ -27,7 +27,7 @@ describe('modules/createLogger', () => {
       .mockImplementation(() => mockDate as unknown as string);
     const spy = jest.spyOn(global.console, 'log').mockImplementation();
 
-    const task = '     TASK     ';
+    const task = '    TASK     ';
     const message = 'hello!';
     const myLog = createLogger('tAsK');
     const timestamp = '[12/4/2020, 2:31:02 AM]';
@@ -40,7 +40,7 @@ describe('modules/createLogger', () => {
     jest.spyOn(global.console, 'log').mockImplementation();
     const myLog = createLogger('tAsK', {
       taskColor: mockTaskColor,
-      timeStampColor: mockTimestampColor,
+      timestampColor: mockTimestampColor,
     });
     myLog('some message');
     expect(chalk[mockTaskColor]).toHaveBeenCalledTimes(1);

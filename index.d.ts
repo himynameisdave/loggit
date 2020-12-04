@@ -6,7 +6,7 @@ export type Log = (message: string, messageColor?: typeof ForegroundColor) => vo
 //  Configuration for createLogger
 export type CreateLoggerConfig = {
   taskColor?: typeof BackgroundColor;
-  timeStampColor?: typeof ForegroundColor;
+  timestampColor?: typeof ForegroundColor;
 };
 
 export type CreateLogger = (task: string, config: CreateLoggerConfig) => Log;
