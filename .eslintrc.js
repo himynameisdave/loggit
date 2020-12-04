@@ -2,6 +2,7 @@ module.exports = {
   "extends": [
     "himynameisdave/configurations/core",
     "himynameisdave/configurations/node",
+    "himynameisdave/configurations/jest",
     "himynameisdave/configurations/typescript",
   ],
   "parserOptions": {
