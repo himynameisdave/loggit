@@ -9,13 +9,13 @@ jest.mock('chalk', () => ({
 
 describe('utils/getTimestamp', () => {
   beforeEach(() => {
-    const mockDate = new Date(1607049062407); // 12/3/2020, 6:31:02 PM
+    const mockDate = new Date(1607049062407); // 12/4/2020, 2:31:02 AM (because we are using the GMT timezone)
     jest
       .spyOn(global, 'Date')
       .mockImplementation(() => mockDate as unknown as string);
   });
   it('should return the correct Date.toLocaleString, wrapped in brackets', () => {
-    const expected = '[12/3/2020, 6:31:02 PM]';
+    const expected = '[12/4/2020, 2:31:02 AM]';
     const actual = getTimestamp();
     expect(actual).toContain(expected);
   });

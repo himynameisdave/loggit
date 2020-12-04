@@ -1,3 +1,6 @@
+//  Ensure that same timezone is used for all tests
+process.env.TZ = 'GMT'; // eslint-disable-line node/no-process-env
+
 export default {
   roots: [
     '<rootDir>/src',

@@ -21,7 +21,7 @@ describe('modules/createLogger', () => {
     spy.mockRestore();
   });
   it('should log with the correct info', () => {
-    const mockDate = new Date(1607049062407); // 12/3/2020, 6:31:02 PM
+    const mockDate = new Date(1607049062407); // 12/4/2020, 2:31:02 AM
     jest
       .spyOn(global, 'Date')
       .mockImplementation(() => mockDate as unknown as string);
@@ -30,7 +30,7 @@ describe('modules/createLogger', () => {
     const task = '     TASK     ';
     const message = 'hello!';
     const myLog = createLogger('tAsK');
-    const timestamp = '[12/3/2020, 6:31:02 PM]';
+    const timestamp = '[12/4/2020, 2:31:02 AM]';
     myLog('hello!');
     expect(console.log).toHaveBeenCalledTimes(1);
     expect(console.log).toHaveBeenCalledWith(`${timestamp}${task}${message}`);
