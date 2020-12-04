@@ -1,6 +1,6 @@
 {
   "name": "loggit",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "A simple and beautiful logging utility for NodeJS.",
   "main": "dist/index.js",
   "types": "./index.d.ts",
