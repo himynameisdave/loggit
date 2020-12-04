@@ -16,7 +16,7 @@ export default function createLogger(task: string, config: CreateLoggerConfig = 
   return function loggit(message: string, messageColor: typeof ForegroundColor): void {
     log([
       //  Setup timestamp
-      getTimestamp(),
+      getTimestamp(config.timeStampColor),
       taskBlock,
       message,
     ].join(''), messageColor);

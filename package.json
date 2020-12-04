@@ -48,7 +48,7 @@
     }
   },
   "lint-staged": {
-    "*.ts": "npm run lint:pre-commit"
+    "*.ts,!*.spec.ts": "npm run lint:pre-commit"
   },
   "keywords": [
     "log",

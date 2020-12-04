@@ -8,3 +8,5 @@ export type CreateLoggerConfig = {
   taskColor?: typeof BackgroundColor;
   timeStampColor?: typeof ForegroundColor;
 };
+
+export type CreateLogger = (task: string, config: CreateLoggerConfig) => Log;
