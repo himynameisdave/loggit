@@ -1,4 +1,5 @@
-import chalk, { Color } from 'chalk';
+import chalk from 'chalk';
+import type { Color } from 'chalk';
 import { DEFAULT_TIMESTAMP_COLOR } from '../constants';
 
 /**
