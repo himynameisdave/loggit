@@ -1,5 +1,6 @@
-import chalk, { BackgroundColor, ChalkFunction } from 'chalk';
+import chalk from 'chalk';
 import center from 'center-align';
+import type { BackgroundColor, ChalkFunction } from 'chalk';
 import { DEFAULT_TASK_BLOCK_WIDTH } from '../constants';
 
 

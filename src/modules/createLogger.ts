@@ -3,7 +3,7 @@ import getTaskBlock from '../utils/getTaskBlock';
 import getTimestamp from '../utils/getTimestamp';
 import { DEFAULT_CREATE_LOGGER_CONFIG } from '../constants';
 import type { ForegroundColor, BackgroundColor } from 'chalk';
-import type { CreateLoggerConfig, Log } from '../../index';
+import type { CreateLoggerConfig, Log } from '../../index.d';
 
 /**
  * Inject with a task (and optionally a color for that task), returns a logger function.

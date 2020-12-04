@@ -8,5 +8,5 @@ import type { ForegroundColor } from 'chalk';
  * @param {chalk.ForegroundColor} [messageColor] - A ForegroundColor.
  */
 export default function log(message: string, messageColor: typeof ForegroundColor = 'whiteBright'): void {
-  console.log(chalk[messageColor](message));
+  console.log(chalk[messageColor](message)); // eslint-disable-line no-console -- We're expecting a console log.
 }
