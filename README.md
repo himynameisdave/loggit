@@ -32,8 +32,8 @@ npm install loggit
 
 `loggit` exposes two modules:
 
-- `log`, which is a very simple logger function.
-- `createLogger`, which allows you to configure some stuff and get a custom logger function.
+- `log` - A very simple logger function.
+- `createLogger` - Returns a customized logger function.
 
 ### `log`
 
@@ -92,6 +92,15 @@ Argument | Type | Default
 `config.taskColor` | `chalk.BackgroundColor` | `'bgCyanBright'`
 `config.timestampColor` | `chalk.ForegroundColor` | `'cyanBright'`
 
+Note that `createLogger` returns the `log` function, meaning that you can also customize the message color when using your custom logger.
+
+```typescript
+import { createLogger } from 'loggit';
+
+const logInfo = createLogger('info');
+
+logInfo('I will be yellow!', 'yellow');
+```
 
 ## Contributing
 
