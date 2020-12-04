@@ -5,8 +5,8 @@
     <a href='https://travis-ci.com/himynameisdave/loggit'>
       <img src="https://travis-ci.com/himynameisdave/loggit.svg?branch=main" alt="Travis Badge" />
     </a>
-    <a href='https://coveralls.io/github/himynameisdave/loggit?branch=master'>
-      <img src='https://coveralls.io/repos/github/himynameisdave/loggit/badge.svg?branch=master' alt='Coverage Status' />
+    <a href='https://coveralls.io/github/himynameisdave/loggit?branch=main'>
+      <img src='https://coveralls.io/repos/github/himynameisdave/loggit/badge.svg?branch=main' alt='Coverage Status' />
     </a>
     <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit?ref=badge_shield">
       <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit.svg?type=shield" alt="FOSSA Status" />
