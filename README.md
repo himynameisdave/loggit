@@ -1,100 +1,106 @@
-# loggit [![npm](https://img.shields.io/npm/v/loggit.svg?style=flat-square)](https://www.npmjs.com/package/loggit)
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit?ref=badge_shield)
+<div align="center" margin="0 auto 20px">
+  <h1>loggit</h1>
+  <p style="font-style: italic;">🌲 A simple and beautiful logging utility for NodeJS.</p>
+  <div>
+    <a href='https://travis-ci.com/himynameisdave/loggit'>
+      <img src="https://travis-ci.com/himynameisdave/loggit.svg?branch=main" alt="Travis Badge" />
+    </a>
+    <a href='https://coveralls.io/github/himynameisdave/loggit?branch=master'>
+      <img src='https://coveralls.io/repos/github/himynameisdave/loggit/badge.svg?branch=master' alt='Coverage Status' />
+    </a>
+    <a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit?ref=badge_shield">
+      <img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit.svg?type=shield" alt="FOSSA Status" />
+    </a>
+  </div>
+</div>
 
-Minuscule node module for loggin' things in a pretty & more visible way. Also created because I got sick of writing out `console.log()` all the time and this is better solution. Uses [chalk](https://www.npmjs.com/package/chalk) to do the colors, so check that out if you're just looking for colors in the console and not a full-on logger like this one.
+---
 
-### Install
+`loggit` is a simple yet robust logger utility for NodeJS. To a degree, it is a wrapper around [`chalk`](https://www.npmjs.com/package/chalk) + `console.log`, so that I don't need to install `chalk` in every project and to standardize the way I do logging in various projects.
 
-This presumes that you've installed node and know how to install an npm module:
+## Install
+
+You can install it with NPM or Yarn:
 
 ```bash
+yarn add loggit
+
 npm install loggit
 ```
 
-### Usage
+## Usage
 
-Usage is simple, just require `loggit` into script...
+`loggit` exposes two modules:
 
-```javascript
-var loggit = require('loggit');
+- `log`, which is a very simple logger function.
+- `createLogger`, which allows you to configure some stuff and get a custom logger function.
+
+### `log`
+
+Provide `log` with a message string, as well as an optional color (of type [`chalk.ForegroundColor`](https://github.com/chalk/chalk/blob/02abeebac3fa41b346ad1f0b4674d371953da932/index.d.ts#L6)), and it will be logged to the console.
+
+```typescript
+import { log } from 'loggit';
+
+
+log('hello world');
+
+log('some error', 'red');
 ```
 
-...and then use it by supplying your message as a string:
-```javascript
-loggit('Dave is my homeboy!');
-```
+Argument | Type | Default
+---|---|---
+`message` | `string` | -
+`color` | `chalk.ForegroundColor` | `'whiteBright'`
 
-...which would result in the following:
+### `createLogger`
 
-![console](http://i.imgur.com/EsA89TL.png)
+`createLogger` allows you to create loggers for various different "tasks" in your app/script. It is more akin to something like [`winston`](https://github.com/winstonjs/winston) than a regular `console.log`, in that it will log a timestamp and make your "task" very visible using a [`chalk.BackGroundColor`](https://github.com/chalk/chalk/blob/02abeebac3fa41b346ad1f0b4674d371953da932/index.d.ts#L31).
 
----
+```typescript
+import { createLogger } from 'loggit';
 
-### Options
-
-What good is a module without any options? In addition to your message, you can also specify the color and the symbol that are used.
-
-```bash
-loggit(msg, color, symbol);
-```
-
-#### `msg`
-***Required,** string, array, object*
-
-This is the only required paramater. If it is a string it will simply be outputted as shown above. Arrays and objects passed in will be pretty printed out so that you don't have that ugly `[object Object]` output.
-
-**Example:** this...
-```bash
-loggit('I\'m just a string!');
-loggit([ 'we\'re', 'an', 'array', 'of', 'strings' ]);
-loggit({
-  foo: {
-    bar: 'we\'re',
-    baz: 'an',
-    roo: 'object',
-    arr: [
-      'this', 'is', 'cool'
-    ]
-  }
+//  Create a simple logger with default options
+const logInfo = createLogger('info');
+//  Create a success logger, where the "task" will be logged with a green BG.
+const logSuccess = createLogger('success', {
+  taskColor: 'bgGreen',
 });
+//  Create an error logger, where the "task" will be red and the timestamp will be bright magenta.
+const logError = createLogger('error', {
+  taskColor: 'bgRed',
+  timestampColor: 'redBright',
+});
+
+//  Use the loggers
+logInfo('Started the app');
+
+logSuccess('Things are going well');
+
+logError('Uh oh, something went wrong');
+
 ```
-...results in this...
 
-![console](http://i.imgur.com/A7WPULc.png)
+This example would write the following to the console:
+
+![An example of createLogger module, displaying three items logged to the console](https://user-images.githubusercontent.com/4298089/101206163-95ce1b80-3623-11eb-8d53-044c37a0de6c.png)
+
+Argument | Type | Default
+---|---|---
+`task` | `string` | -
+`config` | `CreateLoggerConfig` | See below.
+`config.taskColor` | `chalk.BackgroundColor` | `'bgCyanBright'`
+`config.timestampColor` | `chalk.ForegroundColor` | `'cyanBright'`
 
 
-#### `color`
-*optional, string*
+## Contributing
 
-Supply a valid [chalk](https://www.npmjs.com/package/chalk) color (red, green, magenta, underline, bgYellow, etc..) and that color will be used for the entire log. Yellow is used by default if no paramater is provided.
-
-**Example:** this...
-```bash
-loggit('There will be blood...', 'red');
-```
-...results in this...
-
-![otherconsole](http://i.imgur.com/2fcGVMy.png)
-
-#### `symbol`
-*optional, string*
-
-Supply a one or two character pattern that will be repeated for the top and bottom lines of your log (so that it is more visible amongst your various other console messages). The `*` is used by default. If you provide a string longer than two characters, just the first two characters will be used.
-
-**Example:** this...
-```bash
-loggit('Radical, dude!', 'magenta', '!~');
-```
-...results in this...
-
-![otherotherconsole](http://i.imgur.com/T4qUazu.png)
-
----
-
-### Contribute
-
-Feel free to fork the shit outta this thing or [hit me up on Twitter](https://twitter.com/dave_lunny) if you've got a comment or suggestion.
-
+If you have ideas or suggestions on how to improve this package, feel free to file an issue or better yet open a pull request! Please follow the existing code style (enforced by ESLint anyway), and please add/alter unit tests for any new or changed functionality.
 
 ## License
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit?ref=badge_large)
+
+Licensed under MIT.
+
+---
+
+_✌️ Made by [Dave](https://himynameisdave.com)_
