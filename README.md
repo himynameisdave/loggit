@@ -1,4 +1,5 @@
 # loggit [![npm](https://img.shields.io/npm/v/loggit.svg?style=flat-square)](https://www.npmjs.com/package/loggit)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit?ref=badge_shield)
 
 Minuscule node module for loggin' things in a pretty & more visible way. Also created because I got sick of writing out `console.log()` all the time and this is better solution. Uses [chalk](https://www.npmjs.com/package/chalk) to do the colors, so check that out if you're just looking for colors in the console and not a full-on logger like this one.
 
@@ -93,3 +94,7 @@ loggit('Radical, dude!', 'magenta', '!~');
 ### Contribute
 
 Feel free to fork the shit outta this thing or [hit me up on Twitter](https://twitter.com/dave_lunny) if you've got a comment or suggestion.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fhimynameisdave%2Floggit?ref=badge_large)
