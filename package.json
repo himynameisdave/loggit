@@ -6,6 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "prepare" : "npm run build",
     "lint": "eslint ./src/**/*.ts --report-unused-disable-directives",
     "lint:fix": "eslint ./src/**/*.ts --fix --report-unused-disable-directives",
     "lint:pre-commit": "eslint --fix --report-unused-disable-directives",
@@ -18,7 +19,7 @@
     "release": "np --no-yarn"
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">= 12"
   },
   "dependencies": {
     "@types/center-align": "^1.0.0",
