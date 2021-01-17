@@ -1,5 +1,5 @@
 import type { Color } from 'chalk';
-import type { CreateLoggerConfig } from '../index.d';
+import type { CreateLoggerConfig } from '.';
 
 export const DEFAULT_TIMESTAMP_COLOR: typeof Color = 'cyanBright';
 
