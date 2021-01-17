@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepare" : "npm run build",
+    "prepare": "npm run build",
     "lint": "eslint ./src/**/*.ts --report-unused-disable-directives",
     "lint:fix": "eslint ./src/**/*.ts --fix --report-unused-disable-directives",
     "lint:pre-commit": "eslint --fix --report-unused-disable-directives",
