@@ -3,7 +3,7 @@
     "target": "ES3",
     "module": "commonjs",
     "moduleResolution": "node",
-    // "declaration": true,
+    "declaration": true,
     "resolveJsonModule": true,
     "downlevelIteration": true,
     "strictNullChecks": true,
@@ -11,5 +11,7 @@
     "sourceRoot": "./src/",
     "outDir": "./dist/",
     "esModuleInterop": true
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/*.spec.ts"]
 }
