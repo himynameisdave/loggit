@@ -2,8 +2,8 @@
   <h1>loggit</h1>
   <p style="font-style: italic;">🌲 A simple and beautiful logging utility for NodeJS.</p>
   <div>
-    <a href='https://travis-ci.com/himynameisdave/loggit'>
-      <img src="https://travis-ci.com/himynameisdave/loggit.svg?branch=main" alt="Travis Badge" />
+    <a href='https://github.com/himynameisdave/loggit/actions?query=workflow%3Atest+branch%3Amain'>
+      <img src="https://github.com/himynameisdave/loggit/workflows/test/badge.svg" alt="GitHub Actions - Test Workflow Badge" />
     </a>
     <a href='https://coveralls.io/github/himynameisdave/loggit?branch=main'>
       <img src='https://coveralls.io/repos/github/himynameisdave/loggit/badge.svg?branch=main' alt='Coverage Status' />
